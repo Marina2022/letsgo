@@ -2,9 +2,9 @@ const menuButton = document.querySelector(".header__toggle-button");
 const header = document.querySelector(".page-header");
 const logoMob = document.querySelector(".page-header__logo-img--mob");
 const logoTablet = document.querySelector(".page-header__logo-img--tablet");
-const tarrifsModal = document.querySelector(".tariffs-modal");
-const tarrifsLink = document.querySelector(".tariffs__link");
-const tarrifCloseButton = document.querySelector(".tarriffs__close-button");
+const tariffsModal = document.querySelector(".tariffs-modal");
+const tariffsLink = document.querySelector(".tariffs__link");
+const tariffCloseButton = document.querySelector(".tarriffs__close-button");
 const popupWrapper = document.querySelector(".popup-wrapper");
 
 popupWrapper.classList.remove("popup-wrapper--nojs");
@@ -21,12 +21,12 @@ menuButton.addEventListener("click", () => {
   menuButton.classList.toggle("header__toggle-button--opened");
 });
 
-if (tarrifCloseButton) {
-  tarrifCloseButton.addEventListener("click", () => {
-    tarrifsModal.classList.remove("tariffs-modal--open");
+if (tariffCloseButton) {
+  tariffCloseButton.addEventListener("click", () => {
+    tariffsModal.classList.remove("tariffs-modal--open");
   });
-  tarrifsLink.addEventListener("click", (e) => {
+  tariffsLink.addEventListener("click", (e) => {
     e.preventDefault();
-    tarrifsModal.classList.add("tariffs-modal--open");
+    tariffsModal.classList.add("tariffs-modal--open");
   });
 }
