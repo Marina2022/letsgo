@@ -44,7 +44,6 @@ const updateSteps = ()=>{
   steps.forEach((step,index)=>{
     step.classList.add('visually-hidden')
     if (index === currentStep) step.classList.remove('visually-hidden')
-    if (currentStep !==0 ) nav.classList.add('visually-hidden')
   })
 }
 
@@ -64,6 +63,7 @@ nextBtns.forEach((btn)=>{
     e.preventDefault()
     currentStep++
     updateSteps()
+    if (currentStep !==0 ) nav.classList.add('visually-hidden')
   })
 })
 
@@ -72,6 +72,7 @@ prevBtns.forEach((btn)=>{
     e.preventDefault()
     currentStep--
     updateSteps()
+    if (currentStep !==1 ) nav.classList.remove('visually-hidden')
   })
 })
 
