@@ -30,3 +30,5 @@ if (tariffCloseButton) {
     tariffsModal.classList.add("tariffs-modal--open");
   });
 }
+
+
